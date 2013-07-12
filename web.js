@@ -11,10 +11,11 @@ fs.readFile('./index.html', function read(err, data) {
 	content = data;
 
 	console.log(content);
-});
 
 app.get('/', function(request, response) {
-  response.send('Hello World!');
+  response.send(content);
+});
+
 });
 
 var port = process.env.PORT || 5000;
